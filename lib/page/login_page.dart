@@ -41,7 +41,6 @@ class _LoginPageState extends State<LoginPage> {
   /* Dispose controllers when no longer needed */
   @override
   void dispose() {
-    // Dispose of the controllers when they are no longer needed.
     userNameController.dispose();
     passwordController.dispose();
     super.dispose();
