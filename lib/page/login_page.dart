@@ -8,7 +8,7 @@ import 'package:myqrcode/page/qrcode_page.dart';
 import 'package:myqrcode/style/bg_style.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  /* user log-in method*/
+   /* user log-in method*/
   void userLogIn(BuildContext context) {
     final String username = userNameController.text;
     final String password = passwordController.text;
@@ -36,6 +36,15 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  /* Dispose controllers when no longer needed */
+  @override
+  void dispose() {
+    // Dispose of the controllers when they are no longer needed.
+    userNameController.dispose();
+    passwordController.dispose();
+    super.dispose();
   }
 
   @override

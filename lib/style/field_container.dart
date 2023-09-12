@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class FieldContainer extends StatelessWidget {
+class FieldContainer extends StatefulWidget {
   const FieldContainer({
     super.key,
     required this.labelText,
@@ -15,6 +15,11 @@ class FieldContainer extends StatelessWidget {
   final bool obscureText;
   final TextEditingController controller;
 
+  @override
+  State<FieldContainer> createState() => _FieldContainerState();
+}
+
+class _FieldContainerState extends State<FieldContainer> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -38,17 +43,18 @@ class FieldContainer extends StatelessWidget {
           inputFormatters: <TextInputFormatter>[
             FilteringTextInputFormatter.allow(RegExp('[a-zA-Z0-9_-]'))
           ],
-          maxLength: 12,
-          controller: controller,
+          controller: widget.controller,
           textInputAction: TextInputAction.go,
-          obscureText: obscureText,
+          obscureText: widget.obscureText,
+          maxLength: 12,
           decoration: InputDecoration(
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.grey.shade600),
             ),
-            prefixIcon: iconField,
+            prefixIcon: widget.iconField,
             prefixIconColor: Colors.black,
-            labelText: labelText,
+            labelText: widget.labelText,
+            /* hide maxLength */
             counterText: '',
             labelStyle: const TextStyle(
               color: Colors.grey,
