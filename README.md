@@ -1,7 +1,7 @@
 # myqrcodeapp
 
-#A new Flutter project about practicing.
-##Refer to UI from Figma [Figma Pages]([https://pages.github.com/](https://www.figma.com/file/O4qPxIlhUqgl8L9v4wnGAE/Qr-Code?type=design&node-id=1-2&mode=design&t=iU9knXS4lcuSpceD-0)).
+# A new Flutter project about practicing.
+## Refer to UI from Figma [Figma Pages]([https://pages.github.com/](https://www.figma.com/file/O4qPxIlhUqgl8L9v4wnGAE/Qr-Code?type=design&node-id=1-2&mode=design&t=iU9knXS4lcuSpceD-0)).
 
 
 
