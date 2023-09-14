@@ -1,6 +1,7 @@
 # myqrcodeapp
 
 A new Flutter project about practicing.
+Refer to UI from Figma https://www.figma.com/file/O4qPxIlhUqgl8L9v4wnGAE/Qr-Code?type=design&node-id=1-2&mode=design&t=K023E24yyJZVyhKr-0
 
 
 ** Login Page **
